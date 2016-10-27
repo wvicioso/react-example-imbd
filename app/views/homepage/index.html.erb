@@ -1,0 +1,22 @@
+search for a movie:
+<form class="" action="/homepage/show" method="post">
+  <input type="text" name="movie" value="">
+  <input type="submit" value='search'>
+</form>
+
+<% if @movie %>
+  <img src= <%= @movie[:poster] %> alt="" />
+
+  <ul>
+    <h1><%= @movie["Title"] %></h1><br>
+    <%= @movie["Year"] %>
+    <%= @movie["Rated"] %>
+    <%= @movie["Genre"] %><br>
+    Runtime: <%= @movie["Runtime"] %><br>
+    Writer: <%= @movie["Writer"] %><br>
+    Actors:<br>
+    <%= @movie["Actors"] %><br>
+    Plot:<br>
+    <%= @movie["Plot"] %><br>
+  </ul>
+<% end %>
