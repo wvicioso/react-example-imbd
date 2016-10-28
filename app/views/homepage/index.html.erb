@@ -1,14 +1,11 @@
-search for a movie:
-<form class="" action="/homepage/show" method="post">
-  <input type="text" name="movie" value="">
-  <input type="submit" value='search'>
-</form>
+<%= react_component "App" %>
 
-<% if @movie %>
-  <img src= <%= @movie[:poster] %> alt="" />
+<!-- <% if @movie %>
 
   <ul>
     <h1><%= @movie["Title"] %></h1><br>
+    <img src= <%= @movie["Poster"] %> alt="" /><br>
+
     <%= @movie["Year"] %>
     <%= @movie["Rated"] %>
     <%= @movie["Genre"] %><br>
@@ -19,4 +16,4 @@ search for a movie:
     Plot:<br>
     <%= @movie["Plot"] %><br>
   </ul>
-<% end %>
+<% end %> -->

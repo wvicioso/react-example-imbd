@@ -5,11 +5,14 @@ class HomepageController < ApplicationController
   end
 
   def show
-    open('http://www.omdbapi.com/?t=' + params[:movie]) do |f|
-      json_string = f.read
-    p @movie = parsed_json = JSON.parse(json_string)
-    end
-    render :index
+    # if params[:movie]
+    #     open('http://www.omdbapi.com/?t=' + params[:movie]) do |f|
+    #     json_string = f.read
+    #     parsed_json = JSON.parse(json_string)
+    #     @movie = parsed_json
+    #   end
+    #   render json: @movie.to_json
+    # end
   end
 
 end
